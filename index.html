@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+<!-- ─────────────────────────────────────────────────────────────────────────
+     THIS IS THE ONLY PAGE VAULTER EVER HOSTS.
+
+     It is the same page for everybody, every time. It holds no catches, no
+     pictures, no links, no names — nothing that belongs to anyone. The thing
+     that was actually shared travels as a FILE, straight from one phone to
+     another, and never comes near this page.
+
+     Its whole job is the little card WhatsApp draws when the address is sent.
+     ───────────────────────────────────────────────────────────────────────── -->
+
+<title>Vaulter — someone sent you something from their vault</title>
+<meta name="description" content="A private place for the things you save — and a way to actually find them again." />
+
+<!-- REPLACE https://vaulter.app WITH THE REAL ADDRESS BEFORE THIS GOES ANYWHERE.
+     og:image MUST be absolute — a relative path shows a blank card. -->
+<meta property="og:type"        content="website" />
+<meta property="og:site_name"   content="Vaulter" />
+<meta property="og:url"         content="https://vaulter.app/shared" />
+<meta property="og:title"       content="Someone sent you something from their Vaulter" />
+<meta property="og:description" content="A private place for the things you save — and a way to actually find them again." />
+<meta property="og:image"       content="https://vaulter.app/shared/vaulter-share-card.png" />
+<meta property="og:image:width"  content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt"   content="Vaulter" />
+<meta name="twitter:card"       content="summary_large_image" />
+
+<!-- The app's own two: Exo 2 for headings, Rubik for everything else.
+     Rubik carries Hebrew properly, which matters if this page is ever
+     translated. Loaded from Google so the page stays two files. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700;800&family=Rubik:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#F9F5F0; --card:#FFFCF8; --ink:#08383E; --deep:#145E68;
+    --t2:#0F4A52; --t3:#5C7377; --line:#DCD1C4; --coral:#F95246;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font:400 17px/1.55 "Rubik",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex; flex-direction:column; align-items:center;
+    padding:56px 22px 40px; min-height:100vh;
+  }
+  .wrap{width:100%; max-width:440px}
+  .mark{width:96px; height:96px; display:block; margin:0 auto 26px}
+  h1{font-family:"Exo 2","Rubik",sans-serif; font-weight:800; font-size:31px; line-height:1.25; margin:0 0 14px; text-align:center; letter-spacing:-.2px}
+  .lede{font-weight:300; color:var(--t2); text-align:center; margin:0 0 34px}
+
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:18px;
+    padding:22px 22px 20px; margin-bottom:14px;
+  }
+  .card h2{font-family:"Exo 2",sans-serif; font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:.9px; margin:0 0 10px; color:var(--t3)}
+  .card p{margin:0; color:var(--t2); font-size:16px}
+
+  .get{margin-top:30px; text-align:center}
+  .get p{color:var(--t3); font-size:15px; margin:0 0 14px}
+  a.btn{
+    display:inline-block; margin:0 5px 10px; padding:13px 26px; border-radius:999px;
+    background:var(--deep); color:#FFFCF8; text-decoration:none; font-weight:600; font-size:16px;
+  }
+  a.btn.ghost{background:transparent; color:var(--deep); border:1px solid var(--deep)}
+  a.btn[hidden]{display:none}
+
+  footer{
+    margin-top:38px; color:var(--t3); font-size:13px; text-align:center; line-height:1.7;
+  }
+  footer strong{font-family:"Exo 2",sans-serif; font-weight:800; color:var(--t2)}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- the mark, inline so the page is one file and needs nothing else -->
+  <svg class="mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Vaulter">
+    <defs>
+      <linearGradient id="g" x1="14" y1="82" x2="86" y2="18" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#00A0B7"/><stop offset=".5" stop-color="#7E8E7E"/><stop offset="1" stop-color="#FF6B35"/>
+      </linearGradient>
+    </defs>
+    <path d="M41 12h18a4 4 0 0 1 3.6 2.3L70 30l15.7 7.4A4 4 0 0 1 88 41v18a4 4 0 0 1-2.3 3.6L70 70l-7.4 15.7A4 4 0 0 1 59 88H41a4 4 0 0 1-3.6-2.3L30 70l-15.7-7.4A4 4 0 0 1 12 59V41a4 4 0 0 1 2.3-3.6L30 30l7.4-15.7A4 4 0 0 1 41 12Z"
+          stroke="url(#g)" stroke-width="6.5" stroke-linejoin="round"/>
+    <rect x="41" y="41" width="18" height="18" rx="5.5" stroke="url(#g)" stroke-width="6.5"/>
+  </svg>
+
+  <h1>Someone sent you something from their Vaulter</h1>
+  <p class="lede">Open the file they sent — it works in any browser, on any phone.</p>
+
+  <div class="card">
+    <h2>WHAT IS VAULTER</h2>
+    <p>A private place for the things you save. Links, screenshots, recipes, places —
+       it reads what you keep, files it for you, and gives you a way to actually find
+       it again months later.</p>
+  </div>
+
+  <div class="card">
+    <h2>NO FEED, NO SHARING, NO ADS</h2>
+    <p>Everything stays on your own phone. Nothing is uploaded, nothing is public, and
+       nobody is shown what you keep. Not even this page has seen it — the file came
+       straight to you.</p>
+  </div>
+
+  <div class="get">
+    <p>Want one of your own?</p>
+
+    <!-- ASK FIRST, DOWNLOAD SECOND — and right now, ask ONLY.
+         TestFlight is capped at 50 testers and every one of them spends the API
+         credit baked into the app. An open download button on a page that gets
+         forwarded is a way to fill both without noticing. A request gives you a
+         name and lets you decide.
+         Point it wherever suits: a Google Form, a Tally form, mailto:, or a
+         wa.me link. A form is the only one that leaves you a list. -->
+    <a class="btn" id="demo" href="">Ask for an invite</a>
+
+    <!-- Leave an href empty and the button disappears rather than going
+         nowhere. The Android one especially: an EAS build link expires after
+         30 days, and pages sent before that keep pointing at it forever. -->
+    <a class="btn ghost" id="ios"     href="">iPhone</a>
+    <a class="btn ghost" id="android" href="">Android</a>
+  </div>
+
+  <footer>
+    <strong>Vaulter</strong><br>
+    the anti-network — private, quiet, and yours
+  </footer>
+
+</div>
+
+<script>
+  // A button with nowhere to go is worse than no button.
+  for (const id of ["demo","ios","android"]) {
+    const a = document.getElementById(id);
+    if (!a.getAttribute("href")) a.hidden = true;
+  }
+  // And if nothing is filled in yet, do not leave "Want one of your own?"
+  // hanging over an empty space.
+  const box = document.querySelector(".get");
+  if (![...box.querySelectorAll("a.btn")].some((a) => !a.hidden)) box.hidden = true;
+</script>
+</body>
+</html>
