@@ -13,6 +13,11 @@
      word intact — so it looks like nothing happened until you load it.
      Use a code editor, or ask for the change to be made here.
 
+     23 Sep 2026: the relay was added. The key left the app, so the catch now
+     passes through a program of ours on the way to Anthropic. That is a new row in
+     the table and a section of its own, and the sentence promising there was no
+     Vaulter server had to go — there is one now, and it holds two numbers.
+
      Written from the code, not from memory. Every outbound request the app
      makes was listed before this page was written, and every one of them is
      named below. If a sixth ever appears, it belongs on this page the same
@@ -105,14 +110,17 @@
 
   <h1>Privacy</h1>
   <!-- FILL: the date, whenever this page next changes -->
-  <p class="upd">Last updated 13 September 2026</p>
+  <p class="upd">Last updated 23 September 2026</p>
 
   <div class="lede">
-    <p><strong>Your vault lives on your phone.</strong> There is no Vaulter account, no
-       Vaulter server holding your things, and no way for anyone — including us — to
-       look inside what you keep.</p>
+    <p><strong>Your vault lives on your phone.</strong> There is no Vaulter account,
+       nothing you save is stored on any server of ours, and there is no way for
+       anyone — including us — to look inside what you keep.</p>
     <p>Two things do leave, and both are listed below in full: the catch itself, once,
        so it can be read; and anonymous counts, which you can switch off.</p>
+    <p>Since 23 September the catch travels to be read through a small relay of ours
+       rather than straight from your phone. It is a doorway, not a drawer — it keeps
+       no copy. There is a section on it below, and a row in the table.</p>
   </div>
 
   <h2>What stays on your phone</h2>
@@ -124,10 +132,15 @@
      the only copy.</p>
 
   <h2>What leaves your phone, and when</h2>
-  <p>This is the complete list. There is no sixth row.</p>
+  <p>This is the complete list.</p>
 
   <table>
     <tr><th>Where it goes</th><th>What is sent</th><th>When</th></tr>
+    <tr>
+      <td>Vaulter's relay</td>
+      <td>The catch, passing through on its way to be read</td>
+      <td>Each time Vaulter reads something for you</td>
+    </tr>
     <tr>
       <td>Anthropic</td>
       <td>The catch itself — the picture, the text, or the PDF</td>
@@ -154,6 +167,26 @@
       <td>When you save a video link, to fetch its thumbnail</td>
     </tr>
   </table>
+
+  <h2>The relay</h2>
+  <p>Reading a catch needs a key to Anthropic's service. Until now that key travelled
+     inside the app itself, which is fine among a handful of testers and not fine in
+     a public app — a key that ships on a phone can be taken off it. So the key moved
+     to a small program of ours, and the catch now goes there first and is passed on.</p>
+  <p><strong>It keeps nothing.</strong> The catch is forwarded and forgotten. Nothing
+     you save is written down there, nothing is logged, and there is no database of
+     your things — because there is no database. What it does keep is two numbers:
+     how many catches this installation has had read, and what the month has cost us
+     so far. That is the whole of it.</p>
+  <p>It runs on Cloudflare's network, so Cloudflare carries the traffic the way any
+     company carries any request your phone makes. Their terms are at
+     <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a>.</p>
+  <p>The relay is also where the free allowance is counted, which means the random
+     number described under <strong>The counts</strong> is sent there too — and that
+     part is not covered by the switch in Settings. Turning the counts off stops the
+     counting; it cannot stop the allowance needing to know whose it is. It is still
+     the same random number: not your name, not your email, not your account, and
+     gone when you delete the app.</p>
 
   <h2>Reading a catch</h2>
   <p>Vaulter cannot understand a screenshot on its own. To read one, it sends that single
@@ -191,6 +224,9 @@
      app. It is not your name, your email, your Apple or Google account, or your device's
      identifier, and it is not the advertising identifier. Deleting the app deletes it.
      The counts are processed by PostHog on servers in Frankfurt.</p>
+  <p>That same number is also sent to the relay, where it is what the free allowance
+     is counted against. That use is not covered by the switch — see
+     <strong>The relay</strong> above.</p>
 
   <h2>Permissions</h2>
   <ul>
