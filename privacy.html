@@ -110,7 +110,7 @@
 
   <h1>Privacy</h1>
   <!-- FILL: the date, whenever this page next changes -->
-  <p class="upd">Last updated 23 September 2026</p>
+  <p class="upd">Last updated 5 October 2026</p>
 
   <div class="lede">
     <p><strong>Your vault lives on your phone.</strong> There is no Vaulter account,
@@ -142,9 +142,14 @@
       <td>Each time Vaulter reads something for you</td>
     </tr>
     <tr>
-      <td>Anthropic</td>
+      <td>Google</td>
       <td>The catch itself — the picture, the text, or the PDF</td>
       <td>Each time you save something, so Vaulter can read it and file it</td>
+    </tr>
+    <tr>
+      <td>Anthropic</td>
+      <td>The same catch, but only if Google cannot answer</td>
+      <td>When the first service is unavailable</td>
     </tr>
     <tr>
       <td>OpenAI</td>
@@ -190,13 +195,21 @@
 
   <h2>Reading a catch</h2>
   <p>Vaulter cannot understand a screenshot on its own. To read one, it sends that single
-     catch to Anthropic's API, gets back a title, a description and some tags, and keeps
-     the answer on your phone. The same happens with text and PDFs. Voice search works
-     the same way through OpenAI's transcription API.</p>
-  <p><strong>Vaulter keeps nothing on either service.</strong> There is no account there
-     that belongs to you, nothing is stored under your name, and nothing sent for reading
-     is kept by us anywhere. How those companies handle what reaches them is governed by
-     their own terms — Anthropic's are at
+     catch to Google's Gemini API, gets back a title, a description and some tags, and keeps
+     the answer on your phone. The same happens with text and PDFs. If that service is
+     unavailable, the same catch goes to Anthropic instead, so that a save is never lost to
+     somebody else's outage. Voice search works the same way through OpenAI's transcription
+     API.</p>
+  <p><strong>None of them is allowed to learn from what you save.</strong> Google offers
+     these services on two tiers, and the free one improves their models using what it
+     receives. Vaulter is on the paid tier for that reason and no other. Anthropic and
+     OpenAI do not train on what comes through their APIs either.</p>
+  <p><strong>Vaulter keeps nothing on any of these services.</strong> There is no account
+     there that belongs to you, nothing is stored under your name, and nothing sent for
+     reading is kept by us anywhere. How those companies handle what reaches them is
+     governed by their own terms — Google's are at
+     <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>,
+     Anthropic's at
      <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a> and
      OpenAI's at <a href="https://openai.com/policies/privacy-policy">openai.com/policies/privacy-policy</a>.</p>
   <p>If a catch is something you would rather no service ever saw, the honest answer is
